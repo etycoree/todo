@@ -58,8 +58,8 @@ export const addTask = async (task) => {
     'All fields are required'
   );
 
-  if (task.priority < 0)
-    task.priority = 0;
+  if (task.priority < 1)
+    task.priority = 1;
 
   if (task.priority > 10)
     task.priority = 10;
