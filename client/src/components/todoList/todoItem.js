@@ -45,7 +45,7 @@ const useStyles = createUseStyles({
 
   'todo-item__delete-btn': todo => {
     let gridColumn;
-    if (todo.priority === 10 || todo.priority === 0) {
+    if (todo.priority === 10 || todo.priority === 1) {
       gridColumn = '4 / 5';
     } else {
       gridColumn= '2 / 3';
@@ -61,7 +61,7 @@ const useStyles = createUseStyles({
 
   'todo-item__increase-btn': todo => {
     let gridColumn;
-    if (todo.priority === 0) {
+    if (todo.priority === 1) {
       gridColumn = '5 / -1';
     } else {
       gridColumn = '3 / 5';
@@ -107,7 +107,7 @@ export default ({ todo }) => {
         Повысить приоритет
       </div>}
 
-      {todo.priority > 0 && <div
+      {todo.priority > 1 && <div
         className={classes['todo-item__decrease-btn']}
         onClick={onDecreaseBtnClick}
       >
